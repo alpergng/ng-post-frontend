@@ -1,0 +1,10 @@
+.content{
+  position: relative;
+}
+.post-title {
+ color: royalblue;
+}
+
+.delete{
+  color: red;
+}
