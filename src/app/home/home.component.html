@@ -3,7 +3,7 @@
     <div class="row" *ngFor="let post of posts | async">
       <div class="post">
         <h4 class="post-title">{{post.title}}</h4>
-        <p [innerHTML]=" post.picUrl"></p>
+        <img class="images" src= {{post.picUrl}}/>
         <p [innerHTML]="post.content"></p>
         <hr>
       </div>
