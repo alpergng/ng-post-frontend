@@ -13,6 +13,7 @@
       <div class="col-md-3">
         <button class="logout btn btn-default" (click)="logout()" *ngIf="authService.isAuthenticated()">Logout</button>
         <a href="/login" class="login btn btn-default" *ngIf="!authService.isAuthenticated()">Login</a>
+        <a href="/register" class="register btn btn-default " *ngIf="!authService.isAuthenticated()">Register</a>
       </div>
     </div>
   </div>

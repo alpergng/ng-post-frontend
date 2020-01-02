@@ -8,6 +8,7 @@ import {Observable, Subject} from 'rxjs';
 import {error} from 'util';
 import {Router} from '@angular/router';
 import {PostPayload} from '../add-post/post-payload';
+import {RegisterPayload} from './register-payload';
 
 @Injectable({
   providedIn: 'root'
@@ -46,5 +47,8 @@ export class AuthService {
     this.localStorageService.clear('username');
     this.localStorageService.clear('userType');
     this.router.navigateByUrl('/logout');
+  }
+  register(registerPayload: RegisterPayload): Observable<any> {
+      return this.httpClient.post(this.url + 'signup', registerPayload);
   }
 }

@@ -15,6 +15,8 @@ import {EditorModule} from '@tinymce/tinymce-angular';
 import {HttpClientInterceptor} from './http-client-interceptor';
 import {AuthGuard} from './auth.guard';
 import { LogoutComponent } from './auth/logout/logout.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { RegisterSuccessComponent } from './auth/register-success/register-success.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { LogoutComponent } from './auth/logout/logout.component';
     HomeComponent,
     AddPostComponent,
     LogoutComponent,
+    RegisterComponent,
+    RegisterSuccessComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +38,8 @@ import { LogoutComponent } from './auth/logout/logout.component';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'login', component: LoginComponent},
+      {path: 'register', component: RegisterComponent},
+      {path: 'register-success', component: RegisterSuccessComponent},
       {path: 'logout', component: LogoutComponent},
       {path: 'home', component: HomeComponent},
       {path: 'add-post', component: AddPostComponent, canActivate: [AuthGuard]}
